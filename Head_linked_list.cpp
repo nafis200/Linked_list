@@ -71,7 +71,6 @@ int main()
 
     head->next = a;
 
-    // 100 কে হেডে insert করা হচ্ছে
     insert_at_head(head, 100);
 
     Node *temp = head;
