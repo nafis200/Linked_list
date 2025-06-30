@@ -57,7 +57,7 @@ public:
     }
 };
 
-// head কে reference দিয়ে পাঠানো হয়েছে
+
 void insert_at_head(Node* &head, int val){
     Node* newNode = new Node(val);
     newNode->next = head;
