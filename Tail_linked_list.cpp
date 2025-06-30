@@ -58,14 +58,19 @@ public:
 };
 
 
-void insert_at_tail(Node* &head, int val){
+void insert_at_any_postion(Node* head, int inx, int val){
     Node* newNode = new Node(val);
     
     Node *tmp = head;
-    while(tmp->next != NULL){
-           tmp = tmp->next;
+    // index er ager value te stop korbo
+    for(int i = 0; i < inx - 1; i++){
+             tmp = tmp->next;
     }
+    newNode->next = tmp->next;
     tmp->next = newNode;
+
+
+    
 }
 
 int main()
@@ -75,7 +80,7 @@ int main()
 
     head->next = a;
 
-    insert_at_tail(head, 40);
+    insert_at_any_postion(head,2,40);
 
     Node *temp = head;
 
