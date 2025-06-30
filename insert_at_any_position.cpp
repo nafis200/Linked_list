@@ -13,11 +13,16 @@ public:
     }
 };
 
-
-void insert_at_head(Node* &head, int val){
+void insert_at_any_postion(Node* head, int inx, int val){
     Node* newNode = new Node(val);
-    newNode->next = head;
-    head = newNode;
+    
+    Node *tmp = head;
+    for(int i = 0; i < inx - 1; i++){
+        tmp = tmp->next;
+    }
+
+    newNode->next = tmp->next;
+    tmp->next = newNode;
 }
 
 int main()
@@ -27,7 +32,7 @@ int main()
 
     head->next = a;
 
-    insert_at_head(head, 100);
+    insert_at_any_postion(head, 1, 40);
 
     Node *temp = head;
 
