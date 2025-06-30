@@ -15,18 +15,16 @@ public:
 
 int main()
 {
-    Node* head = new Node(10);
-    Node* a = new Node(20);
+    Node *head = new Node(10);
+    Node *a = new Node(20);
 
     head->next = a;
 
-    Node* temp = head;
+    Node *temp = head;
 
-
-    while(temp->next != NULL){
+    while (temp->next != NULL)
+    {
         cout << temp->val << " ";
         temp = temp->next;
     }
-
-
 }
